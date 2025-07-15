@@ -8,47 +8,53 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 30 50% 98%;
-    --foreground: 28 28% 15%;
+    --background: 35 20% 96%;
+    --foreground: 355 40% 15%;
 
-    --card: 30 60% 96%;
-    --card-foreground: 28 28% 15%;
+    --card: 35 25% 94%;
+    --card-foreground: 355 40% 15%;
 
-    --popover: 30 60% 96%;
-    --popover-foreground: 28 28% 15%;
+    --popover: 35 25% 94%;
+    --popover-foreground: 355 40% 15%;
 
-    --primary: 28 85% 35%;
-    --primary-foreground: 30 60% 98%;
+    --primary: 355 65% 45%;
+    --primary-foreground: 35 20% 98%;
 
-    --secondary: 30 30% 88%;
-    --secondary-foreground: 28 28% 25%;
+    --secondary: 25 35% 85%;
+    --secondary-foreground: 355 40% 25%;
 
-    --muted: 30 30% 90%;
-    --muted-foreground: 28 15% 45%;
+    --muted: 35 25% 88%;
+    --muted-foreground: 355 20% 45%;
 
-    --accent: 35 85% 55%;
-    --accent-foreground: 30 60% 98%;
+    --accent: 25 85% 55%;
+    --accent-foreground: 355 65% 15%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 30 30% 85%;
-    --input: 30 30% 85%;
-    --ring: 28 85% 45%;
+    --border: 35 25% 82%;
+    --input: 35 25% 82%;
+    --ring: 355 65% 50%;
 
-    /* Custom restaurant colors */
-    --restaurant-warm: 25 80% 60%;
-    --restaurant-earth: 35 60% 45%;
-    --restaurant-cream: 45 40% 90%;
+    /* Logo-inspired restaurant colors */
+    --restaurant-burgundy: 355 65% 45%;
+    --restaurant-warm-red: 10 75% 55%;
+    --restaurant-orange: 25 85% 55%;
+    --restaurant-gold: 40 80% 60%;
+    --restaurant-cream: 45 40% 92%;
+    --restaurant-dark: 355 30% 15%;
     
-    /* Gradients */
-    --gradient-warm: linear-gradient(135deg, hsl(var(--restaurant-warm)), hsl(var(--accent)));
-    --gradient-earth: linear-gradient(180deg, hsl(var(--restaurant-earth)), hsl(var(--primary)));
-    --gradient-hero: linear-gradient(135deg, hsl(28 85% 35% / 0.95), hsl(25 80% 60% / 0.85));
+    /* Gradients inspired by logo */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--restaurant-burgundy)), hsl(var(--restaurant-warm-red)));
+    --gradient-warm: linear-gradient(135deg, hsl(var(--restaurant-warm-red)), hsl(var(--restaurant-orange)));
+    --gradient-sunset: linear-gradient(135deg, hsl(var(--restaurant-orange)), hsl(var(--restaurant-gold)));
+    --gradient-hero: linear-gradient(135deg, hsl(355 65% 45% / 0.95), hsl(10 75% 55% / 0.9));
+    --gradient-radial: radial-gradient(circle, hsl(var(--restaurant-burgundy)), hsl(var(--restaurant-dark)));
     
-    /* Shadows */
-    --shadow-warm: 0 10px 30px -10px hsl(var(--restaurant-warm) / 0.3);
-    --shadow-elegant: 0 20px 40px -10px hsl(var(--primary) / 0.2);
+    /* Shadows with logo colors */
+    --shadow-burgundy: 0 10px 30px -10px hsl(var(--restaurant-burgundy) / 0.4);
+    --shadow-warm: 0 15px 35px -12px hsl(var(--restaurant-warm-red) / 0.3);
+    --shadow-elegant: 0 20px 40px -10px hsl(var(--restaurant-burgundy) / 0.25);
     
     /* Animations */
     --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);

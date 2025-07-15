@@ -7,10 +7,10 @@ import restauranteHero from "@/assets/restaurante-hero.jpg"
 
 const Index = () => {
   const especialidades = [
-    { nome: "Frutos do Mar", descricao: "Peixes frescos da região preparados com temperos especiais" },
-    { nome: "Pratos Típicos", descricao: "Comida caseira com o sabor tradicional paranaense" },
-    { nome: "Carnes Grelhadas", descricao: "Carnes selecionadas grelhadas no ponto perfeito" },
-    { nome: "Sobremesas Artesanais", descricao: "Doces tradicionais feitos com muito carinho" }
+    { nome: "Buffet Livre", descricao: "Variedade completa de pratos quentes e frios, à vontade" },
+    { nome: "Buffet por Kg", descricao: "Monte seu prato do jeito que preferir, pagando apenas pelo peso" },
+    { nome: "Marmitas", descricao: "Refeições completas para levar, perfeitas para o dia a dia" },
+    { nome: "Porções", descricao: "Deliciosas porções para compartilhar com amigos e família" }
   ]
 
   const horarios = [
@@ -44,8 +44,8 @@ const Index = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button variant="warm" size="lg" className="text-lg px-8 py-6" asChild>
-              <a href="#cardapio">Ver Especialidades</a>
+            <Button variant="sunset" size="lg" className="text-lg px-8 py-6" asChild>
+              <a href="#cardapio">Ver Nossos Serviços</a>
             </Button>
             <Button variant="outline" size="lg" className="text-lg px-8 py-6 bg-white/10 backdrop-blur-sm border-white/30 text-white hover:bg-white/20" asChild>
               <a href="/pousada">Conheça Nossa Pousada</a>
@@ -81,14 +81,17 @@ const Index = () => {
               </p>
               
               <div className="flex flex-wrap gap-2 mb-8">
-                <Badge variant="secondary" className="bg-restaurant-cream text-restaurant-earth">
-                  Ambiente Familiar
+              <Badge variant="secondary" className="bg-restaurant-cream text-restaurant-burgundy">
+                  Buffet Livre
                 </Badge>
-                <Badge variant="secondary" className="bg-restaurant-cream text-restaurant-earth">
-                  Ingredientes Frescos
+                <Badge variant="secondary" className="bg-restaurant-cream text-restaurant-burgundy">
+                  Buffet por Kg
                 </Badge>
-                <Badge variant="secondary" className="bg-restaurant-cream text-restaurant-earth">
-                  Comida Caseira
+                <Badge variant="secondary" className="bg-restaurant-cream text-restaurant-burgundy">
+                  Marmitas
+                </Badge>
+                <Badge variant="secondary" className="bg-restaurant-cream text-restaurant-burgundy">
+                  Porções
                 </Badge>
               </div>
             </div>
@@ -96,30 +99,30 @@ const Index = () => {
             <div className="space-y-6">
               <Card className="bg-card/80 backdrop-blur-sm border-border/50 shadow-warm">
                 <CardHeader className="flex flex-row items-center space-y-0 pb-4">
-                  <MapPin className="h-6 w-6 text-restaurant-warm mr-3" />
+                  <MapPin className="h-6 w-6 text-restaurant-orange mr-3" />
                   <div>
                     <CardTitle className="text-lg text-primary">Localização</CardTitle>
-                    <CardDescription>Pontal do Paraná - PR</CardDescription>
+                    <CardDescription>PR-412, 2705 - Santa Terezinha, Pontal do Paraná - PR</CardDescription>
                   </div>
                 </CardHeader>
               </Card>
 
               <Card className="bg-card/80 backdrop-blur-sm border-border/50 shadow-warm">
                 <CardHeader className="flex flex-row items-center space-y-0 pb-4">
-                  <Star className="h-6 w-6 text-restaurant-warm mr-3" />
+                  <Star className="h-6 w-6 text-restaurant-orange mr-3" />
                   <div>
-                    <CardTitle className="text-lg text-primary">Avaliação</CardTitle>
-                    <CardDescription>⭐⭐⭐⭐⭐ Excelente pelos clientes</CardDescription>
+                    <CardTitle className="text-lg text-primary">Localização</CardTitle>
+                    <CardDescription>Próximo ao centro de Santa Terezinha</CardDescription>
                   </div>
                 </CardHeader>
               </Card>
 
               <Card className="bg-card/80 backdrop-blur-sm border-border/50 shadow-warm">
                 <CardHeader className="flex flex-row items-center space-y-0 pb-4">
-                  <Utensils className="h-6 w-6 text-restaurant-warm mr-3" />
+                  <Utensils className="h-6 w-6 text-restaurant-orange mr-3" />
                   <div>
-                    <CardTitle className="text-lg text-primary">Especialidade</CardTitle>
-                    <CardDescription>Culinária Regional & Frutos do Mar</CardDescription>
+                    <CardTitle className="text-lg text-primary">Serviços</CardTitle>
+                    <CardDescription>Buffet Livre • Buffet Kg • Marmitas • Porções</CardDescription>
                   </div>
                 </CardHeader>
               </Card>
@@ -133,10 +136,10 @@ const Index = () => {
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-primary mb-6">
-              Nossas Especialidades
+              Nossos Serviços
             </h2>
             <p className="text-xl text-muted-foreground">
-              Pratos preparados com ingredientes selecionados e muito carinho
+              Oferecemos diferentes opções para atender todos os gostos e necessidades
             </p>
           </div>
 
@@ -173,7 +176,7 @@ const Index = () => {
             {horarios.map((item, index) => (
               <Card key={index} className="bg-card/90 backdrop-blur-sm border-2 border-border hover:border-primary transition-colors">
                 <CardHeader className="text-center">
-                  <Clock className="h-8 w-8 text-restaurant-warm mx-auto mb-4" />
+                  <Clock className="h-8 w-8 text-restaurant-orange mx-auto mb-4" />
                   <CardTitle className="text-lg text-primary">{item.dia}</CardTitle>
                   <CardDescription className="text-xl font-semibold text-foreground">
                     {item.horario}
@@ -186,7 +189,7 @@ const Index = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 bg-gradient-warm">
+      <section className="py-20 px-4 bg-gradient-primary">
         <div className="container mx-auto max-w-4xl text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-primary-foreground mb-6">
             Faça sua Reserva

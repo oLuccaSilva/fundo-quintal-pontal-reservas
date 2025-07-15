@@ -63,17 +63,23 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				},
 				restaurant: {
-					warm: 'hsl(var(--restaurant-warm))',
-					earth: 'hsl(var(--restaurant-earth))',
-					cream: 'hsl(var(--restaurant-cream))'
+					burgundy: 'hsl(var(--restaurant-burgundy))',
+					'warm-red': 'hsl(var(--restaurant-warm-red))',
+					orange: 'hsl(var(--restaurant-orange))',
+					gold: 'hsl(var(--restaurant-gold))',
+					cream: 'hsl(var(--restaurant-cream))',
+					dark: 'hsl(var(--restaurant-dark))'
 				}
 			},
 			backgroundImage: {
+				'gradient-primary': 'var(--gradient-primary)',
 				'gradient-warm': 'var(--gradient-warm)',
-				'gradient-earth': 'var(--gradient-earth)',
-				'gradient-hero': 'var(--gradient-hero)'
+				'gradient-sunset': 'var(--gradient-sunset)',
+				'gradient-hero': 'var(--gradient-hero)',
+				'gradient-radial': 'var(--gradient-radial)'
 			},
 			boxShadow: {
+				'burgundy': 'var(--shadow-burgundy)',
 				'warm': 'var(--shadow-warm)',
 				'elegant': 'var(--shadow-elegant)'
 			},

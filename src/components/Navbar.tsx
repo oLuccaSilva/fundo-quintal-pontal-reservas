@@ -2,6 +2,7 @@ import { useState } from "react"
 import { Menu, X, Utensils, Bed } from "lucide-react"
 import { Button } from "@/components/ui/custom-button"
 import { Link, useLocation } from "react-router-dom"
+import logoImage from "@/assets/logo-fundo-quintal.png"
 
 export function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -12,10 +13,8 @@ export function Navbar() {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2">
-            <div className="bg-gradient-warm rounded-lg p-2">
-              <Utensils className="h-6 w-6 text-primary-foreground" />
-            </div>
+          <Link to="/" className="flex items-center space-x-3">
+            <img src={logoImage} alt="Fundo de Quintal" className="h-12 w-12 rounded-full" />
             <span className="text-xl font-bold text-primary">Fundo de Quintal</span>
           </Link>
 
@@ -37,7 +36,7 @@ export function Navbar() {
             >
               Pousada
             </Link>
-            <Button variant="restaurant" asChild>
+            <Button variant="burgundy" asChild>
               <a href="https://wa.me/5541999933288" target="_blank" rel="noopener noreferrer">
                 Entre em Contato
               </a>
@@ -76,7 +75,7 @@ export function Navbar() {
                 Pousada
               </Link>
               <div className="px-3 pt-2">
-                <Button variant="restaurant" className="w-full" asChild>
+                <Button variant="burgundy" className="w-full" asChild>
                   <a href="https://wa.me/5541999933288" target="_blank" rel="noopener noreferrer">
                     Entre em Contato
                   </a>
