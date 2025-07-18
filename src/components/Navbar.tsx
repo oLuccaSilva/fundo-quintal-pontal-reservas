@@ -37,9 +37,9 @@ export function Navbar() {
               Pousada
             </Link>
             <Button variant="burgundy" asChild>
-              <a href="https://wa.me/5541999933288" target="_blank" rel="noopener noreferrer">
+              <Link to="https://wa.me/5541999933288" target="_blank" rel="noopener noreferrer">
                 Entre em Contato
-              </a>
+              </Link>
             </Button>
           </div>
 
@@ -76,9 +76,9 @@ export function Navbar() {
               </Link>
               <div className="px-3 pt-2">
                 <Button variant="burgundy" className="w-full" asChild>
-                  <a href="https://wa.me/5541999933288" target="_blank" rel="noopener noreferrer">
+                  <Link to="https://wa.me/5541999933288" target="_blank" rel="noopener noreferrer">
                     Entre em Contato
-                  </a>
+                  </Link>
                 </Button>
               </div>
             </div>

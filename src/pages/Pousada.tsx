@@ -10,6 +10,7 @@ import { DateRange } from "react-day-picker"
 import quartoCasal from "@/assets/quarto-casal.jpg"
 import quartoSolteiro from "@/assets/quarto-solteiro.jpg"
 import quartoFamilia from "@/assets/quarto-familia.jpg"
+import { Link } from "react-router-dom"
 
 const Pousada = () => {
   const [selectedDateRange, setSelectedDateRange] = useState<DateRange | undefined>()
@@ -274,10 +275,10 @@ const Pousada = () => {
                   Ou entre em contato diretamente:
                 </p>
                 <Button variant="outline" asChild>
-                  <a href="https://wa.me/5541999933288" target="_blank" rel="noopener noreferrer">
+                  <Link to="https://wa.me/5541999933288" target="_blank" rel="noopener noreferrer">
                     <Phone className="mr-2 h-4 w-4" />
                     (41) 99993-3288
-                  </a>
+                  </Link>
                 </Button>
               </div>
             </CardContent>
@@ -298,15 +299,15 @@ const Pousada = () => {
           
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <Button variant="outline" size="lg" className="text-lg px-8 py-6 bg-white text-primary border-white hover:bg-white/90" asChild>
-              <a href="/">
+              <Link to="/">
                 Conheça Nosso Restaurante
-              </a>
+              </Link>
             </Button>
             <Button variant="outline" size="lg" className="text-lg px-8 py-6 bg-white text-primary border-white hover:bg-white/90" asChild>
-              <a href="https://wa.me/5541999933288" target="_blank" rel="noopener noreferrer">
+              <Link to="https://wa.me/5541999933288" target="_blank" rel="noopener noreferrer">
                 <Phone className="mr-2 h-5 w-5" />
                 Entre em Contato
-              </a>
+              </Link>
             </Button>
           </div>
         </div>
