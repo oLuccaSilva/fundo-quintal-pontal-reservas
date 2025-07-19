@@ -6,6 +6,9 @@ import { Badge } from "@/components/ui/badge"
 import { Navbar } from "@/components/Navbar"
 import { DateRangePicker } from "@/components/DateRangePicker"
 import { WhatsAppButton } from "@/components/WhatsAppButton"
+import { ParallaxHero } from "@/components/ParallaxHero"
+import { AnimatedSection, StaggerContainer, StaggerItem } from "@/components/AnimatedSection"
+import { motion } from "framer-motion"
 import { DateRange } from "react-day-picker"
 import quartoCasal from "@/assets/quarto-casal.jpg"
 import quartoSolteiro from "@/assets/quarto-solteiro.jpg"
@@ -52,36 +55,52 @@ const Pousada = () => {
     <div className="min-h-screen bg-background">
       <Navbar />
       
-      {/* Hero Section */}
-      <section className="relative h-screen flex items-center justify-center overflow-hidden pt-16">
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: `url(${quartoCasal})` }}
-        />
-        <div className="absolute inset-0 bg-gradient-hero" />
+      {/* Hero Section with Parallax */}
+      <ParallaxHero backgroundImage={quartoCasal} className="pt-16">
+        <motion.h1 
+          className="text-5xl md:text-7xl font-bold mb-6 text-reveal"
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1, delay: 0.5 }}
+        >
+          Pousada Fundo de Quintal
+        </motion.h1>
+        <motion.p 
+          className="text-xl md:text-2xl mb-8 opacity-90"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.8 }}
+        >
+          Hospedagem aconchegante em Pontal do Paraná
+        </motion.p>
+        <motion.p 
+          className="text-lg md:text-xl mb-12 opacity-80 max-w-2xl mx-auto"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 1 }}
+        >
+          Quartos confortáveis e acolhedores para você desfrutar de momentos únicos 
+          na costa paranaense.
+        </motion.p>
         
-        <div className="relative z-10 text-center text-primary-foreground px-4 max-w-4xl mx-auto">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-fade-in">
-            Pousada Fundo de Quintal
-          </h1>
-          <p className="text-xl md:text-2xl mb-8 opacity-90">
-            Hospedagem aconchegante em Pontal do Paraná
-          </p>
-          <p className="text-lg md:text-xl mb-12 opacity-80 max-w-2xl mx-auto">
-            Quartos confortáveis e acolhedores para você desfrutar de momentos únicos 
-            na costa paranaense.
-          </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button variant="warm" size="lg" className="text-lg px-8 py-6" asChild>
+        <motion.div 
+          className="flex flex-col sm:flex-row gap-4 justify-center"
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 1.2 }}
+        >
+          <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+            <Button variant="warm" size="lg" className="text-lg px-8 py-6 hover-glow animate-float" asChild>
               <a href="#quartos">Ver Quartos</a>
             </Button>
+          </motion.div>
+          <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
             <Button variant="outline" size="lg" className="text-lg px-8 py-6 bg-white/10 backdrop-blur-sm border-white/30 text-white hover:bg-white/20" asChild>
               <a href="#reserva">Fazer Reserva</a>
             </Button>
-          </div>
-        </div>
-      </section>
+          </motion.div>
+        </motion.div>
+      </ParallaxHero>
 
       {/* Sobre a Pousada */}
       <section className="py-20 px-4">
